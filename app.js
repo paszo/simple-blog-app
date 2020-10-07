@@ -3,7 +3,8 @@ const express = require('express');
 const app = express();
 const port = process.env.PORT || 3000;
 
-// const dbURI = process.env.DBURI;
+const dbURI = process.env.DBURI;
+console.log(dbURI);
 
 app.get('/', (req, res) => {
     res.send('hello main master');
