@@ -6,7 +6,7 @@ const port = process.env.PORT || 3000;
 // const dbURI = process.env.DBURI;
 
 app.get('/', (req, res) => {
-    res.send('hello main');
+    res.send('hello main master');
 })
 
 
