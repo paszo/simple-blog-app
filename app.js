@@ -3,10 +3,10 @@ const express = require('express');
 const app = express();
 const port = process.env.PORT || 3000;
 
-const dbURI = process.env.DBURI;
+// const dbURI = process.env.DBURI;
 
 app.get('/', (req, res) => {
-    res.send('hello');
+    res.send('hello main');
 })
 
 
