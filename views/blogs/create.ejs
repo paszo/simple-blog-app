@@ -1,0 +1,14 @@
+<%- include('../partials/header') %>
+<%- include('../partials/navigation') %>
+<h1>New blog</h1>
+<form action="/blogs/create" method="POST">
+    <label for="title">Title</label>
+    <input name="title" id="title" type="text" required>
+    <label for="snippet">Snippet</label>
+    <input name="snippet" id="snippet" type="text" required>
+    <label for="blog">Blog</label>
+    <textarea name="blog" id="blog" required></textarea>
+    <label for="submit">Submit</label>
+    <button>Submit</button>
+</form>
+<%- include('../partials/footer') %>

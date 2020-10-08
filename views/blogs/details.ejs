@@ -1,0 +1,21 @@
+<%- include('../partials/header') %>
+<%- include('../partials/navigation') %>
+<h1>Details page</h1>
+<h2><%= blog.title %></h2>
+<%= blog.blog %>
+<a class="delete" data-doc="<%= blog.id %>">delete</a>
+<script>
+    const delete_button = document.querySelector('a.delete');
+    delete_button.addEventListener('click', (e) => {
+        const endpoint = `/blogs/${delete_button.dataset.doc}`;
+        fetch(endpoint, {method: 'DELETE'})
+        .then((response) => {
+            window.location.href = '/blogs';
+        })
+        .catch((err) => {
+            console.log(err);
+        })
+    })
+
+</script>
+<%- include('../partials/footer') %>
